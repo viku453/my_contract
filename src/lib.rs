@@ -5,6 +5,7 @@ pub extern "C" fn alloc(len: u32) -> *mut u8 {
     let mut buf = Vec::with_capacity(len as usize);
     let ptr = buf.as_mut_ptr();
     std::mem::forget(buf);
+    let a = 1;
     return ptr;
 }
 
